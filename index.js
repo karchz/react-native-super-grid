@@ -6,16 +6,8 @@ class SuperGrid extends Component {
   constructor(props) {
     super(props);
     this.renderRow = this.renderRow.bind(this);
-    this.onLayout = this.onLayout.bind(this);
     this.getDimensions = this.getDimensions.bind(this);
-    this.state = this.getDimensions();
-  }
-
-  onLayout(e) {
-    const { width } = e.nativeEvent.layout || {};
-    this.setState({
-      ...this.getDimensions(width),
-    });
+    this.state = this.getDimensions(props.width);
   }
 
   getDimensions(lvWidth) {
@@ -97,6 +89,7 @@ SuperGrid.propTypes = {
   fixed: PropTypes.bool,
   spacing: PropTypes.number,
   style: View.propTypes.style,
+  width:PropTypes.number.isRequired
 };
 
 SuperGrid.defaultProps = {
