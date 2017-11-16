@@ -91,7 +91,7 @@ SuperGrid.propTypes = {
   itemWidth: PropTypes.number,
   fixed: PropTypes.bool,
   spacing: PropTypes.number,
-  style: View.propTypes.style,
+  style: viewPropTypes.style,
   width:PropTypes.number.isRequired
 };
 
