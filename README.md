@@ -3,7 +3,6 @@
 Responsive Grid View for React Native.
 
 
-
 ## Getting Started
 
 This component renders a Grid View that adapts itself to various screen resolutions.
